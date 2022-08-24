@@ -861,3 +861,17 @@ img {
 
   z-index: 99999;
 }
+
+/* .extraedit{
+  background-color: blue;
+} */
+/* 
+extraedit class created to set the position of clear button in form
+which appears when new user registers */
+.extraedit a {
+  display: block;
+}
+
+.extraedit label {
+  display: inline-block;
+}

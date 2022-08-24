@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Profile, Skill, Message
 
+
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model=User
@@ -16,7 +17,7 @@ class CustomUserCreationForm(UserCreationForm):
 
         for name, field in self.fields.items():
             field.widget.attrs.update({'class':'input'})
-
+        
 
 
 class ProfileForm(ModelForm):
@@ -30,7 +31,8 @@ class ProfileForm(ModelForm):
         super(ProfileForm, self).__init__(*args, **kwargs)
 
         for name, field in self.fields.items():
-            field.widget.attrs.update({'class':'input'})     
+            field.widget.attrs.update({'class':'input'})
+
 
 class SkillForm(ModelForm):
     class Meta:
